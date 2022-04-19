@@ -1,0 +1,64 @@
+@import './Navbar.js';
+@import url(https://fonts.googleapis.com/css?family=Praise:regular);
+
+.Indice-navbar{
+    padding: 0;
+    background-color: aqua;
+    height: 20%;
+    width: 100%;
+}
+.Indice-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    word-wrap: break-word;
+    padding: 0;
+    background-color: aqua;
+    height: 20%;
+    width: 100%;
+}
+.Indice-brand{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Praise';
+    font-size: 16px;
+    font-weight: bold;
+    color: darkmagenta;
+    text-decoration: none;
+
+}
+.Indice-nav{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+
+}
+.Indice-link{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Praise';
+    font-size: 16px;
+    font-weight: bold;
+    color: darkmagenta;
+    text-decoration: none;
+}
+
+.Indice-link > a{
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Praise';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Indice-nav > .Indice-link:hover{
+    color: black;
+}
+.Indice-nav > .Indice-link:focus{
+    color: black;
+}
