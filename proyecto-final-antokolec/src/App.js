@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Indice from './component/Navbar/Navbar';
+import Navbar from './component/Navbar';
+import ItemListContainer from './component/ItemListContainer';
 
 
 
@@ -10,7 +11,9 @@ import Indice from './component/Navbar/Navbar';
 function App() {
   return (
     <div className="App">
-      <Indice />
+      <Navbar />
+      <ItemListContainer greeting= 'En este sitio encontrarás todos nuestros productos próximamente. Te esperamos!!!' />
+
       <header className="App-header">
         
         <img src={logo} className="App-logo" alt="logo" />
