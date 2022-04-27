@@ -7,7 +7,7 @@
     justify-content: center;
     justify-self: center;
     font-family: 'Beau Rivage';
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
 
 }
@@ -17,7 +17,7 @@
     justify-content: center;
     margin-top: 2%;
     font-family: 'Beau Rivage';
-    font-size: 25px;
+    font-size: 18px;
 
     
 }
@@ -52,7 +52,8 @@
     justify-items: center;
     justify-self: center;
     font-weight: bold;
-    width: 50px;
+    width: 18px;
+    color: black;
 }
 
 .botonagregar{
@@ -72,6 +73,6 @@
     border: 0;
     background-image: var(--bsgradient);
     color: white;
-    width: 200px;
+    width: 150px;
 }
 
