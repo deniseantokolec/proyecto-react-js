@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemCount from '../BotonAgregar';
+import BotonDetalle from '../Botondetalle';
 import './item.css'
 
 
@@ -11,7 +11,7 @@ function Items({actividad}) {
             <h3 className='titulo'>{actividad.Actividades}</h3>
             <small className='descripcion'> La frecuencia es: {actividad.Frecuencia}</small> 
             <p className='precio'>{actividad.Precio}</p>
-            <ItemCount initial={1} stock={80} />
+            <BotonDetalle />
         </div>                 
     )
 }
