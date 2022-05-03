@@ -9,6 +9,7 @@ function Items({actividad}) {
             
         <div className='box'>
             <h3 className='titulo'>{actividad.Actividades}</h3>
+            <img src={actividad.Imgurl} alt="Foto actividad" className='imgitems'/>
             <small className='descripcion'> La frecuencia es: {actividad.Frecuencia}</small> 
             <p className='precio'>{actividad.Precio}</p>
             <BotonDetalle />

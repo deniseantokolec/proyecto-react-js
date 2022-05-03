@@ -17,7 +17,7 @@
     justify-content: center;
     margin-top: 2%;
     font-family: 'Beau Rivage';
-    font-size: 18px;
+    font-size: 30px;
 
     
 }
@@ -52,7 +52,7 @@
     justify-items: center;
     justify-self: center;
     font-weight: bold;
-    width: 18px;
+    width: 30px;
     color: black;
 }
 
@@ -61,7 +61,7 @@
     justify-content: center;
     margin-top: 1%;
     font-family: 'Beau Rivage';
-    font-size: 25px;
+    font-size: 30px;
     
 }
 
@@ -73,6 +73,6 @@
     border: 0;
     background-image: var(--bsgradient);
     color: white;
-    width: 150px;
+    width: 200px;
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import clases from '../Items/data/clases'
+import clases from '../Items/clases'
 import ItemList from '../Items/ItemList'
 import'./item-list-container.css'
 

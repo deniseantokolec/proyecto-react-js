@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import clases from '../Items/data/clases';
+import clases from '../Items/clases';
 import Itemdetail from './item-detail';
 import './item-detail.css'
 
@@ -16,7 +16,7 @@ function ItemDetailContainer () {
 
     useEffect(() => {
         getItem().then(respuestaPromise => {
-          setClase(respuestaPromise[0]);
+          setClase(respuestaPromise[5]);
         })
     
     },[])

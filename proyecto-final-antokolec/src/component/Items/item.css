@@ -31,6 +31,16 @@
 
 }
 
+.imgitems{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    align-content: center;
+    align-items: center;
+    margin-left: 35%;
+    margin-right: 2%;
+}
+
 .descripcion{
     font-family: 'Beau Rivage';
     font-size: 20px;
