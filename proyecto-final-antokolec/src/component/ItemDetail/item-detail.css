@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
 
-.box{
+
+.boxdetail{
     display:flex;
     flex-direction:column;
-    height: 300px;
+    height: 600px;
     width: 100%;
     padding: 0;
     margin-left: 2%;
@@ -24,16 +25,16 @@
 
 .descripciondetail{
     font-family: 'Beau Rivage';
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
-    margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
+                        
 }
 
 .preciodetail{
     font-family: 'Beau Rivage';
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     margin-left: 2%;
@@ -42,19 +43,21 @@
 
 .imagendetail{
     width: 400px;
-    height: 400px;
+    height: 4000px;
     object-fit: contain;
     align-content: center;
     align-items: center;
-    margin-left: 35%;
+    margin-left: 34%;
     margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
 
 
 }
 
 
 ItemCount{
-    text-align: center;
-    margin-left: 2%;
-    margin-right: 2%;
+   text-align: center;
+   margin-left: 2%;
+   margin-right: 2%;
 }

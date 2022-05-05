@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import BotonDetalle from '../Botondetalle';
 import './item.css'
 
@@ -12,7 +13,7 @@ function Items({actividad}) {
             <img src={actividad.Imgurl} alt="Foto actividad" className='imgitems'/>
             <small className='descripcion'> La frecuencia es: {actividad.Frecuencia}</small> 
             <p className='precio'>{actividad.Precio}</p>
-            <BotonDetalle />
+            <Link to={`/item/${actividad.id}`}><BotonDetalle /></Link>
         </div>                 
     )
 }

@@ -7,15 +7,10 @@
     margin-top: 1%;
     font-family: 'Beau Rivage';
     font-size: 25px;
-    
-}
-
-.detalle{
-    display: flex;
-    justify-content: center;
     font-weight: bold;
     border: 0;
     background-image: var(--bsgradient);
     width: 150px;
     color: white;
+    
 }
