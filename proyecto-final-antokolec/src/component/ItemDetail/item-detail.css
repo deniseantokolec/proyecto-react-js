@@ -61,3 +61,21 @@ ItemCount{
    margin-left: 2%;
    margin-right: 2%;
 }
+
+.verdetalle{
+    display: flex;
+    align-items: center;
+    object-position: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    margin-left: 35%;
+    border:0;
+    background-image: var(--bsgradient);
+    color: white;
+    margin-top: 1%;
+    font-family: 'Beau Rivage';
+    font-size: 30px;
+    width: 30%;
+    
+}

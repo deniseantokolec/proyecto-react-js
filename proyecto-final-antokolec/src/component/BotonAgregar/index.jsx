@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './itemcount.css'
-import Swal from 'sweetalert2'
+
 
 
 
@@ -17,17 +17,14 @@ function ItemCount(props) {
        return setCount(count - 1)
     }
 
-    function AgregarCarrito(){
-                
-          
-        Swal.fire({ 
-            title:'Has agregado un nuevo producto!', 
-            text:'Para ver el detalle hacer click en el carrito.',
-            icon: 'success',
-            
-        })
+
+    function AgregarCarrito(){              
+        props.onAdd(count)
+        
         return(
             console.log('Has agregado productos a tu carrito')
+            
+            
 
         ) 
         
@@ -36,13 +33,12 @@ function ItemCount(props) {
 
   return (
     <div>
-       {/* <h1 className='titulo'>Agrega tus productos</h1> */}
-       <div>
+        <div>
            <div className='botones'>
                 <button onClick={handleQuitar} className=' bg-primary quitar'>-</button>
                 <span className='valor'>{count}</span>
                 <button onClick={handleAgregar} className=' bg-primary agregar'>+</button>
-            </div>
+            </div>   
             <div className='botonagregar'>
                 <button onClick={AgregarCarrito} className='bg-primary carrito'>Agregar a carrito</button>
             </div>
