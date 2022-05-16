@@ -9,11 +9,12 @@ import './item-detail.css'
 
 function Itemdetail({ actividad }) {
   const [isInCart,setIsInCart] = useState(false)
-  const {addToCart} = useCartContext();
+  const {addToCart,CartQuantity} = useCartContext();
 
   function onAdd(count){
     setIsInCart(true)
     addToCart(actividad,count)
+    
    
     return(
      console.log('Agregaste: ', actividad,count)
@@ -21,7 +22,7 @@ function Itemdetail({ actividad }) {
 
   }
 
-
+ 
   return (
     <div className='boxdetail'>
       <h3 className='titulodetail'>{actividad.Actividades}</h3>

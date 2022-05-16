@@ -55,39 +55,22 @@ export function CartContextProvider({children}) {
         setCart(estaEnCart)
     }                                          
        
-    const CartQuantity = (quantity) => {
-        const total = 0
-        const cartQuantity= cart.forEach(cartItem => {
-            if(cartItem.quantity === quantity){
-                const copyItem = {...cartItem}
-                copyItem.quantity += total
-                return copyItem;
-            }
-               
-            else
-            return cartItem;    
-            
-        })
-        setCart(cartQuantity)
-        
+    const CartQuantity = () => {
+        const newCart = [...cart]
+        const cartQuantity = newCart.reduce((total,item)=>{return total + item.quantity},0);
+        setCart(cartQuantity);
+        console.log(cartQuantity);
+        return cartQuantity;
         
     }
 
-    const CartPrice = (price) =>{
-        const total = 0
-        const cartPrice= cart.forEach(Price => {
-            if(Price.price === price){
-                const copyPrice = {...Price}
-                copyPrice.price += total
-                return copyPrice;
-            }
-       
-            else
-            return Price;    
-    
-        })
-        setCart(cartPrice)
-        
+    const CartPrice = () =>{    
+        const newPrice = [...cart]
+        const cartPrice = newPrice.reduce((total,valor)=>{return total + valor.price},0);
+        setCart(cartPrice);
+        console.log(cartPrice);
+        return cartPrice;
+            
     }
 
   return (
