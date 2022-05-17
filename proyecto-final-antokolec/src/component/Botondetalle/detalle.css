@@ -12,5 +12,12 @@
     background-image: var(--bsgradient);
     width: 150px;
     color: white;
+    text-decoration-line: none;
+    text-decoration: none;
     
+}
+.boton:hover{
+    color: black;
+    text-decoration-line: none;
+    text-decoration: none;
 }

@@ -20,7 +20,7 @@ function getItem(id) {
  }
 
 function ItemDetailContainer () {
-    const [clase, setClase] = useState([]) 
+    const [clase, setClase] = useState() 
     const{ id } = useParams();
 
     useEffect(() => {

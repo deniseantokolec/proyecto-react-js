@@ -76,6 +76,11 @@ ItemCount{
     margin-top: 1%;
     font-family: 'Beau Rivage';
     font-size: 30px;
+    font-weight: bold;
     width: 30%;
+    text-decoration-line: none;
     
+}
+.verdetalle:hover{
+    color: black;
 }

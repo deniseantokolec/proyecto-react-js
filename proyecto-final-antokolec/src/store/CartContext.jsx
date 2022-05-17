@@ -1,7 +1,15 @@
 import React, { createContext, useContext, useState } from 'react'
 
 
-const CartContext = createContext();
+const CartContext = createContext({
+    cart: [],
+    addToCart: () =>{},
+    removeFromCart: ()=>{},
+    clearCart: ()=>{},
+    isInCart: ()=>{},
+    CartQuantity: ()=>{},
+    CartPrice: ()=>{}
+});
 const {Provider} = CartContext;
 const useCartContext = () => useContext(CartContext);
 
@@ -9,7 +17,7 @@ export function CartContextProvider({children}) {
     const [cart, setCart] = useState([]);
 
     const addToCart = (item, quantity) => {
-        if(isInCart()){
+        if(isInCart(item.id)){
            const newCart= cart.map(cartitem => {
                 if(cartitem.id === item.id){
                     const copyItem = {...cartitem}
@@ -41,33 +49,31 @@ export function CartContextProvider({children}) {
     }
 
     const clearCart = (id) => {
-        const newCart = [...cart]
-        const CartClear = newCart.reduce((item)=> {
-            return item.id === id
-        });
-        setCart(CartClear)
+       setCart([])
+    
     }
 
     const isInCart = (id) => {
         const IsInCart = [...cart]
-        const estaEnCart= IsInCart.some(itemCart => itemCart.id === id);
+        const estaEnCart= IsInCart.find(itemCart => itemCart.id === id);
  
         setCart(estaEnCart)
+        return estaEnCart
     }                                          
        
-    const CartQuantity = () => {
-        const newCart = [...cart]
-        const cartQuantity = newCart.reduce((total,item)=>{return total + item.quantity},0);
-        setCart(cartQuantity);
-        console.log(cartQuantity);
-        return cartQuantity;
+    const CartQuantity = (quantity) => {
+        const total = 0;
+        const cartTotal = cart.forEach((item =>quantity = item.quantity + total),0);
+        console.log(cartTotal);
+        return cartTotal
+
+              
         
     }
 
-    const CartPrice = () =>{    
-        const newPrice = [...cart]
-        const cartPrice = newPrice.reduce((total,valor)=>{return total + valor.price},0);
-        setCart(cartPrice);
+    const CartPrice = () =>{
+        const totalprice = 0;    
+        const cartPrice = cart.forEach(item=>  totalprice += item.price );
         console.log(cartPrice);
         return cartPrice;
             
