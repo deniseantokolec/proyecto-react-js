@@ -11,7 +11,7 @@ function CartWidget(item) {
   return (
     <div className='cartwidget-box'>
       <Link to={'/cart'}><img src={shoppingcart1} className="cartwidget" alt="Carrito" /></Link>
-      <h4>{CartQuantity(item.quantity)}</h4>
+      <h4 className='cartquantity'>{CartQuantity(item.quantity)}</h4>
     </div>
     
   )

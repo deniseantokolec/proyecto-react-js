@@ -5,7 +5,7 @@ import './cart.css'
 
 
 function CartContainer () {
-  const{cart,removeFromCart, clearCart}= useCartContext();
+  const{cart,removeFromCart, clearCart, CartQuantity, CartPrice}= useCartContext();
   console.log(cart);
   
   if (cart.length ===0){
@@ -20,13 +20,19 @@ function CartContainer () {
       {cart.map((itemcart)=>{
         return <div className='div-cartcontainer'>
           <div className='div-datoscart'>
-            <h2 className='titulo-actividad'>{itemcart.Actividades}</h2>
+            <h2 className='titulo-actividad'>{itemcart.Actividad}</h2>
             <h2 className='titulo-cantidad'>{itemcart.quantity}</h2>
-            <h2 className='titulo-precio'>${itemcart.quantity * itemcart.price}</h2>
+            <h2 className='titulo-precio'>${itemcart.quantity * itemcart.Precio}</h2>
             <button onClick={()=>removeFromCart(itemcart.id)} className='bg-primary eliminar'>X</button>
           </div>
         </div>})}
-      
+        
+        <div className='div-totales'>
+          <h2 className='cantidadtotal'>Cantidad total: {CartQuantity()} clases</h2>
+          <h2 className='preciototal'>Precio Total: ${CartPrice()}</h2>
+        </div>
+        
+        
         <div className='div-cartbotones'>
           <button className='bg-primary volverainicio'><Link to="/" className='linkinicio'>Volver a la lista de actividades</Link></button>
           <button onClick={clearCart} className='bg-primary vaciar'>Vaciar carrito</button>

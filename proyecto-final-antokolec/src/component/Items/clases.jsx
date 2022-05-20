@@ -12,7 +12,7 @@ const clases =[{
     Imgurl: Canto,
     Genero:"Musica",
     Frecuencia: "Semanal",
-    Precio: "$5000",
+    Precio: 5000,
     Stock: 1
   }, {
     id: "2",
@@ -20,7 +20,7 @@ const clases =[{
     Imgurl:Piano,
     Genero:"Musica",
     Frecuencia: "Semanal",
-    Precio: "$7500",
+    Precio: 7500,
     Stock: 1
   }, {
     id: "3",
@@ -28,7 +28,7 @@ const clases =[{
     Imgurl:Guitarra,
     Genero:"Musica",
     Frecuencia: "Semanal",
-    Precio: "$7500",
+    Precio: 7500,
     Stock: 1
   }, {
     id: "4",
@@ -36,7 +36,7 @@ const clases =[{
     Imgurl:Comedia,
     Genero:"Teatro",
     Frecuencia: "3 veces por semana",
-    Precio: "$9500",
+    Precio: 9500,
     Stock: 30
   }, {
     id: "5",
@@ -44,7 +44,7 @@ const clases =[{
     Imgurl:Teatro,
     Genero:"Teatro",
     Frecuencia: "2 veces por semana",
-    Precio: "$8500",
+    Precio: 8500,
     Stock: 30
   }, {
     id: "6",
@@ -52,7 +52,7 @@ const clases =[{
     Imgurl:Standup,
     Genero:"Teatro",
     Frecuencia: "2 veces por semana",
-    Precio: "$8000",
+    Precio: 8000,
     Stock: 30
 }]
 

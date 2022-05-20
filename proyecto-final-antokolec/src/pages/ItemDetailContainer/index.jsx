@@ -1,23 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import clases from '../../component/Items/clases';
 import Itemdetail from '../../component/ItemDetail/item-detail';
+import { getItemsId as getItem } from '../../database';
 import '../../component/ItemDetail/item-detail.css'
 import { useParams } from 'react-router-dom';
 
-function getItem(id) {
-    return new Promise ((resolve, reject) => {
-        
-        setTimeout (() => {
-          if(id !== undefined){
-            const item = clases.find(i => i.id === id);
-            resolve(item)
-          }
-          else{
-            resolve(clases)
-          };},2000)
-    })
-    
- }
 
 function ItemDetailContainer () {
     const [clase, setClase] = useState() 

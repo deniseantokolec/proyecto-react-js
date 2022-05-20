@@ -28,10 +28,10 @@ function Itemdetail({ actividad }) {
  
     return (
       <div className='boxdetail'>
-        <h3 className='titulodetail'>{actividad.Actividades}</h3>
-        <img src={actividad.Imgurl} alt={actividad.Actividades} className='imagendetail'/>
+        <h3 className='titulodetail'>{actividad.Actividad}</h3>
+        <img src={actividad.Img} alt={actividad.Actividad} className='imagendetail'/>
         <h4 className='descripciondetail'> La frecuencia es: {actividad.Frecuencia}</h4> 
-        <p className='preciodetail'>{actividad.Precio}</p>
+        <p className='preciodetail'>${actividad.Precio}</p>
         {isInCart ? 
           <div>
           <Link to={'/cart'} className='bg-primary verdetalle'>Ver carrito</Link>

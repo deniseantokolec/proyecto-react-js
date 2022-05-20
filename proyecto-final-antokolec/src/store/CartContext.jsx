@@ -48,35 +48,27 @@ export function CartContextProvider({children}) {
         setCart(CartFiltred)
     }
 
-    const clearCart = (id) => {
+    const clearCart = () => {
        setCart([])
     
     }
 
     const isInCart = (id) => {
-        const IsInCart = [...cart]
-        const estaEnCart= IsInCart.find(itemCart => itemCart.id === id);
- 
-        setCart(estaEnCart)
+        const estaEnCart= cart.some(itemCart => itemCart.id === id);
         return estaEnCart
     }                                          
        
-    const CartQuantity = (quantity) => {
-        const total = 0;
-        const cartTotal = cart.forEach((item =>quantity = item.quantity + total),0);
-        console.log(cartTotal);
-        return cartTotal
-
-              
+    const CartQuantity = () => {
+        //const total = 0;
+        return cart.reduce((total, value) => {return total + value.quantity}, 0)
         
     }
 
     const CartPrice = () =>{
-        const totalprice = 0;    
-        const cartPrice = cart.forEach(item=>  totalprice += item.price );
-        console.log(cartPrice);
-        return cartPrice;
-            
+        //const totalprice = 0;    
+        return cart.reduce((total, item) => {return total + (item.Precio*item.quantity)}, 0)
+        
+               
     }
 
   return (
