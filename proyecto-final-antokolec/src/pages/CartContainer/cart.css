@@ -78,13 +78,13 @@
 
 .div-cartbotones{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    padding: 0;
-    margin-left: 40%;
+    padding:0;
+    margin-left: 20%;
     margin-top: 2%;
     margin-bottom: 2%;
+
 }
 
 .eliminar{
@@ -117,7 +117,6 @@
 
 .sinseleccion{
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100%;
     font-family: 'Beau Rivage';
@@ -127,12 +126,14 @@
 
 .vovlerainicio{
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-left: 2%;
     margin-right: 2%;
     background-image: var(--bsgradient);
     border-style: none;
+    border: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 
   
 }
@@ -145,6 +146,7 @@
     width: 30%;
     color: white;
     border-style: none;
+    
 
 
 }
@@ -166,7 +168,9 @@
     color: white;
     text-decoration-line: none;
     text-decoration: none;
-    
+    margin-left: 20px;
+   
+   
 }
 .vaciar:hover{
     color: black;
@@ -200,4 +204,43 @@
     width: 100%;
     
     
+}
+
+.comprar{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    font-family: 'Beau Rivage';
+    font-size: 30px;
+    font-weight: bold;
+    border: 0;
+    background-image: var(--bsgradient);
+    width: 150px;
+    color: white;
+    text-decoration-line: none;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.comprar:hover{
+    color: black;
+}
+
+.detalle{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    font-family: 'Beau Rivage';
+    font-size: 30px;
+    font-weight: bold;
+    border: 0;
+    background-image: var(--bsgradient);
+    width: 150px;
+    color: white;
+    text-decoration-line: none;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.detalle:hover{
+    color: black;
 }
