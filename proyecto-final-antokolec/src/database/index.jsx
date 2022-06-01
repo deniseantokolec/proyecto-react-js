@@ -60,17 +60,30 @@ export async function createBuyOrder(orderData){
     const micoleccion = collection(firestoreDB, "buyOrder");
     const orderDoc = await addDoc(micoleccion, orderplusDate);
     console.log('Order id: ', orderDoc.id);
+
+    return orderDoc.id
  
 }
 
-export async function getAllOrders(){
-    const micoleccion = collection(firestoreDB, 'buyOrder');
-    const buyOrdersSnapshot = await getDocs(micoleccion);
+export async function createBuyOrderName(orderData){
+    const buyDate = Timestamp.now();
+    const orderplusDate = {...orderData, date: buyDate};
 
-    return buyOrdersSnapshot.docs.map(doc =>{
-        return {
-            ...doc.data(),
-            id: doc.id
-        }
-    });
+    const micoleccion = collection(firestoreDB, "buyOrder");
+    const orderDoc = await addDoc(micoleccion, orderplusDate);
+    console.log('Order id: ', orderDoc.id);
+
+    return orderDoc.items
+ 
 }
+
+
+
+
+
+
+
+
+
+
+

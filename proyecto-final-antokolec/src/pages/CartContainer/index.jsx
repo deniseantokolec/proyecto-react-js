@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 import useCartContext from '../../store/CartContext';
-import { createBuyOrder} from '../../database/'
+import { createBuyOrder } from '../../database/'
 import './cart.css'
-import BuyOrder from '../../component/CartWidget/BuyOrder';
 import ItemListContainer from '../ItemListContainer/'
 
 
@@ -13,7 +12,11 @@ import ItemListContainer from '../ItemListContainer/'
 function CartContainer () {
   const{cart,removeFromCart, clearCart, CartQuantity, CartPrice}= useCartContext();
   console.log(cart);
+  const [ orderID, setOrderIDEnviada] = useState(false);
 
+
+
+  
 
   function handleBuy() {
     const itemsToBuy = cart.map((items) => ({
@@ -24,25 +27,44 @@ function CartContainer () {
     }))
     const buyOrder = {
       buyer: {
-        name:"",
-        phone:"",
-        email:"",
+        name:"Denise",
+        phone:"11655447788",
+        email:"dmeisui@gmail.com",
       },
       items: itemsToBuy,
       total: CartPrice(),
     }
-    
-    createBuyOrder(buyOrder)
-    
+    createBuyOrder(buyOrder).then(res => {
+      setOrderIDEnviada(res)
+    })
+    console.log(orderID);
+  
+    clearCart()
   }
         
-  if (cart.length === 0){
-    return(<div className='div-error'>
-      <h3 className='sinseleccion'>No hay clases seleccionadas en el carrito...</h3>
-      <button className='bg-primary volverainicio'><a href="/" className='linkinicio'>Volver a la 
-      lista de actividades</a></button>
-    </div>)
-  }else if(cart.length !== 0){
+  if(cart.length === 0){
+    if(orderID){
+      return (
+        <div className='div-id'>
+          <h2 className='id'>El Id de tu compra es: {orderID}</h2>
+       </div>
+      )
+    }
+    return(
+      <>
+      <div className='div-error'>
+      <h2 className='sinseleccion'>No hay clases nuevas seleccionadas...</h2>
+      <button className='bg-primary volverainicio'><Link to="/" className='linkinicio'>Volver a 
+        la lista de actividades</Link></button>
+      </div>
+      
+      </>
+    ) 
+ 
+ 
+ 
+  
+  }else  if(cart.length !== 0){
     return(
       <div className='div-cart'>
         <h1 className='titulocart'>Tu carrito: Estas a un paso de convertirte en un artista</h1>
@@ -65,8 +87,7 @@ function CartContainer () {
       
       
         <div className='div-cartbotones'>
-          <button onClick={handleBuy()} className='bg-primary comprar'>Comprar!</button><br />
-          <button onClick= {()=>{return <BuyOrder/>}} className=' bg-primary detalle'>Ver detalle</button><br />
+          <button onClick={handleBuy} className='bg-primary comprar'>Comprar!</button><br />
           <button className='bg-primary volverainicio'><Link to="/" className='linkinicio'>Volver a 
           la lista de actividades</Link></button><br />
           <button onClick={clearCart} className='bg-primary vaciar'>Vaciar carrito</button>

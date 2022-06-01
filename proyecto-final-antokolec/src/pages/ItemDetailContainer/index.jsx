@@ -3,6 +3,7 @@ import Itemdetail from '../../component/ItemDetail/item-detail';
 import { getItemsId as getItem } from '../../database';
 import '../../component/ItemDetail/item-detail.css'
 import { useParams } from 'react-router-dom';
+import './item-detail-container.css'
 
 
 function ItemDetailContainer () {

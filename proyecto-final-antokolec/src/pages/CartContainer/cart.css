@@ -7,6 +7,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    background-image:linear-gradient(to right top, #0d6efd, #0084ff, #0097ff, #00a8ff, 
+#00b8fb, #33c4f7, #54cef3, #72d8ef, #9ae2f0, #bcecf3, #ddf6f8, #fcffff);  
 }
 
 
@@ -20,13 +22,15 @@
 }
 
 .titulocart{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
     font-family: 'Beau Rivage';
     font-size: 40px;
-    font-weight: 500;
+    font-weight: bold;
+    color: white;
+    margin-left: 25%;
+    margin-top: 2%;
+    text-shadow: 1px 1px 2px rgb(55, 0, 254), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0)
+;        
+
 }
 
 
@@ -81,7 +85,7 @@
     flex-direction: row;
     justify-content: center;
     padding:0;
-    margin-left: 20%;
+    margin-left: 28%;
     margin-top: 2%;
     margin-bottom: 2%;
 
@@ -113,15 +117,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image:linear-gradient(to right top, #0d6efd, #0084ff, #0097ff, #00a8ff, 
+#00b8fb, #33c4f7, #54cef3, #72d8ef, #9ae2f0, #bcecf3, #ddf6f8, #fcffff); ;    
 }
 
 .sinseleccion{
-    display: flex;
-    justify-content: center;
-    width: 100%;
     font-family: 'Beau Rivage';
     font-size: 40px;
-    font-weight: 500;
+    font-weight: bold;
+    color: white;
+    margin-left: 2%;
+    margin-top: 2%;
+    text-shadow: 1px 1px 2px rgb(55, 0, 254), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0)
 }
 
 .vovlerainicio{
@@ -130,7 +137,6 @@
     margin-left: 2%;
     margin-right: 2%;
     background-image: var(--bsgradient);
-    border-style: none;
     border: 0;
     margin-left: 20px;
     margin-right: 20px;
@@ -220,6 +226,7 @@
     text-decoration-line: none;
     text-decoration: none;
     margin-left: 20px;
+    margin-right: 20px;
 }
 .comprar:hover{
     color: black;
@@ -243,4 +250,28 @@
 }
 .detalle:hover{
     color: black;
+}
+
+.div-id{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(to right top, #0d6efd, #0084ff, #0097ff, #00a8ff, 
+#00b8fb, #33c4f7, #54cef3, #72d8ef, #9ae2f0, #bcecf3, #ddf6f8, #fcffff); ;    
+}
+
+.id{
+    font-family: 'Beau Rivage';
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(55, 0, 254), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+    justify-content: flex-start;
+    align-content:flex-start;
+    justify-items:flex-start;
+    margin-left: 30%;
+    width: 100%;
 }

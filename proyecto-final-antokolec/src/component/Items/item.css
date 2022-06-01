@@ -6,7 +6,7 @@
    flex-direction: column;
    border-style:solid;
    border-color: blue;
-   height: 250px;
+   height: 300px;
    width: 250px;
    padding: 0;
    margin-left: 8%;
@@ -16,7 +16,6 @@
    -webkit-box-shadow: 0px 0px 4px 0px rgba(2, 2, 2, 0.75);
    -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
    box-shadow: 0px 0px 4px 0px rgba(3, 3, 253, 0.75);
-   
    
          
 }
@@ -28,6 +27,9 @@
     font-weight: bold;
     margin-left: 1%;
     margin-right: 1%;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(55, 0, 254), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0)
+;        
 
 }
 
